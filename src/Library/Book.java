@@ -40,10 +40,14 @@ public class Book {
         return year;
     }
 
+    public double getPrice(){
+        return year;
+    }
+
     //sobre escritura del constructor, ya que este muestra en pantalla
     // la informacion del libro basado en su posicion en memoria , con esto podemos mostrar la informacion
     @Override
     public String toString() {
-        return "Title: " + title + "\n" + "Autor:" + autor;
+        return "\n Title: " + title + "\n" + "Autor:" + autor;
     }
 }

@@ -20,10 +20,11 @@ public class Library {
 
     public void searchByTitle(String title){
         if (Data.containsKey(title)){
-            System.out.println("El  libro esta disponible");
-            System.out.println("Mas informacion al respecto " + Data.get(title));
+            System.out.println("El  libro esta disponible" + "\n");
+            System.out.println("Mas informacion al respecto: \n" + Data.get(title));
+
         }else{
-            System.out.println("No hay informacion acerca de este libro");
+            System.out.println("\n No hay informacion acerca de este libro");
         }
     }
 
@@ -41,17 +42,18 @@ public class Library {
         }else{
             System.out.println("Libros del autor : " + autor + ":  ");
             for (Book book : located){
-                System.out.println("Titulo: " + book.getTitle());
+                System.out.println("\n Titulo: " + book.getTitle());
                 System.out.println("Autor: " + book.getAutor());
                 System.out.println("ISBN: " + book.getISBN());
                 System.out.println("Editorial: " +  book.getEditorial());
                 System.out.println("Año: " + book.getYear());
+                System.out.println("Precio: " + book.getPrice());
             }
         }
     }
 
     public void showInventory(){
-        System.out.println("The inventory on the Library: ");
+        System.out.println("The inventory on the Library: " + "\n");
         for (Book book : Data.values()){
             System.out.println(book + "\n");
         }

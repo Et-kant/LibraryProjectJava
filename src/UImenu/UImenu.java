@@ -29,8 +29,8 @@ public class UImenu {
             switch (opcion) {
                 case 1:
                     // Agregar Nuevo Libro
-                    Book newbook = new Book("title", "autor", "ISBN", "Editorial", 1998, 2000);
-                    Book newbook2 = new Book("maria", "antonieta", "ISBN", "wewewe", 2112, 2321);
+                    Book newbook = new Book("Metamorfosis", "kafka", "ISBN", "NORMA", 1998, 2000);
+                    Book newbook2 = new Book("Relatos de un naufrago", "Gabriel garcia marquez", "ISBN", "mundo libro", 2112, 2321);
                     Library.bookAdd(newbook);
                     Library.bookAdd(newbook2);
 
@@ -46,9 +46,10 @@ public class UImenu {
                 case 3:
                     // Buscar Libro por Autor
                     System.out.println("\nBuscar Libro por Autor:");
-                    System.out.print("Ingrese el nombre del autor a buscar: ");
+                    System.out.print("Ingrese el nombre del autor a buscar: "  + "\n");
                     String autorBusqueda = scanner.nextLine();
                     library.searchByAutor(autorBusqueda);
+                    break;
 
                 case 4:
                     // Mostrar Inventario
