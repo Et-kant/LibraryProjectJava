@@ -1,5 +1,6 @@
 package Library;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,25 +11,41 @@ public class Library {
         Data = new HashMap<>();
     }
 
-    //Method that it is used in order to add books into the Hashmap, this requires
-    //2 variable, title and the object book
+    //Metodo que se encarga de subir los libros al hashmap, add book
     public static void bookAdd(Book book){
         Data.put(book.getTitle(), book);
     }
 
+    //metodo para buscar segun titulo
+
     public void searchByTitle(String title){
         if (Data.containsKey(title)){
-            System.out.println("The book is available");
-            System.out.println("More information: " + Data.get(title));
+            System.out.println("El  libro esta disponible");
+            System.out.println("Mas informacion al respecto " + Data.get(title));
         }else{
-            System.out.println("There is no information about this book");
+            System.out.println("No hay informacion acerca de este libro");
         }
     }
 
+    //metodo encargada de buscar basado en autor
     public void searchByAutor(String autor){
+        List<Book> located = new ArrayList<>();
         for (Book book : Data.values()){
             if (book.getAutor().equalsIgnoreCase(autor)){
-                System.out.println(book);
+                located.add(book);
+            }
+        }
+
+        if(located.isEmpty()){
+            System.out.println("No se encontraron libros de este autor");
+        }else{
+            System.out.println("Libros del autor : " + autor + ":  ");
+            for (Book book : located){
+                System.out.println("Titulo: " + book.getTitle());
+                System.out.println("Autor: " + book.getAutor());
+                System.out.println("ISBN: " + book.getISBN());
+                System.out.println("Editorial: " +  book.getEditorial());
+                System.out.println("Año: " + book.getYear());
             }
         }
     }

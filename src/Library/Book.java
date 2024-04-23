@@ -28,6 +28,20 @@ public class Book {
         return autor;
     }
 
+    public String getISBN(){
+        return ISBN;
+    }
+
+    public String getEditorial(){
+        return editorial;
+    }
+
+    public int getYear(){
+        return year;
+    }
+
+    //sobre escritura del constructor, ya que este muestra en pantalla
+    // la informacion del libro basado en su posicion en memoria , con esto podemos mostrar la informacion
     @Override
     public String toString() {
         return "Title: " + title + "\n" + "Autor:" + autor;

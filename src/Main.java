@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //menu traido directamente desde otra clase
+        //menu traido directamente desde otra clases
         showMenu();
     }
 }
