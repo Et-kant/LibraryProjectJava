@@ -30,6 +30,7 @@ public class Library {
 
     //metodo encargada de buscar basado en autor
     public void searchByAutor(String autor){
+        //ahora el metodo devuelve una lista de libros que coinciden con el autor,  asi puede devolver todos los libros similares y no uno
         List<Book> located = new ArrayList<>();
         for (Book book : Data.values()){
             if (book.getAutor().equalsIgnoreCase(autor)){
